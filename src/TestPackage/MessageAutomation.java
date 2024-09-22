@@ -95,10 +95,14 @@ public class MessageAutomation {
 			        } else {
 			            System.out.println("No suggestions found to click.");
 			        }
+			        
+			        
+			        driver.findElement(By.id("com.google.android.apps.messaging:id/compose_message_text")).sendKeys("Hey Mashiur");
 			  
-			  Thread.sleep(4000);
-			  
-			  // Quit the driver at the end driver.quit();
+			        driver.findElement(By.xpath("//android.view.View[@resource-id=\"Compose:Draft:Send\"]")).click();
+			        Thread.sleep(4000);
+
+			        driver.quit();
 			 
 
 		} catch (MalformedURLException e) {
